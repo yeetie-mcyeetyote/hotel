@@ -1,0 +1,382 @@
+<html>
+  
+  
+<head>
+  
+  <style>
+  
+  
+  body{
+    background-color:white;
+    
+  }
+  
+  
+  #div1 {
+    background-color:#436397;
+    width:200px;
+    height:200px;
+    float:left;
+    border-style:solid;
+    border-width:1px;
+    padding:20px;
+    margin:10px;
+    overflow:scroll;
+    
+    
+    
+  }
+  #div2 {
+    background-color:#436397;
+    width:200px;
+    height:200px;
+    float:left;
+    border-style:solid;
+    border-width:1px;
+    padding:20px;
+    margin:10px;
+    overflow:scroll;
+    
+  }
+  
+  #div3 {
+    background-color:#436397;
+    width:200px;
+    height:200px;
+    float:left;
+    border-style:solid;
+    border-width:1px;
+    padding:20px;
+    margin:10px;
+    overflow:scroll;
+    
+  }
+  
+  #div4 {
+    background-color:#436397;
+    width:200px;
+    height:200px;
+    float:left;
+    border-style:solid;
+    border-width:1px;
+    padding:20px;
+    margin:10px;
+    overflow:scroll;
+    
+  }
+  
+  #div5 {
+    background-color:#436397;
+    width:200px;
+    height:200px;
+    float:left;
+    border-style:solid;
+    border-width:1px;
+    padding:20px;
+    margin:10px;
+    overflow:scroll;
+    
+  }
+  
+  #div6 {
+    background-color:#436397;
+    width:200px;
+    height:200px;
+    float:left;
+    border-style:solid;
+    border-width:1px;
+    padding:20px;
+    margin:10px;
+    overflow:scroll;
+    
+  }
+  
+  #logo {
+    
+    background-image:;
+    width:200px;
+    height:200px;
+    float:left;
+    border-style:dashed;
+    border-width:5px;
+    padding:33px;
+    margin:10px;
+    font-size:10px;
+    
+    
+  }
+  
+  #ph {
+    background-image:url("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1840885/580/386/m1/fpnw/wm1/diamonds-pr-.jpg?1478112256&s=7db23b1f676f9db80cab803378af8d45");
+    width:200px;
+    height:200px;
+    float:left;
+    border-style:solid;
+    border-width:1px;
+    padding:20px;
+    margin:10px;
+    font-size:10px;
+    
+  }
+  
+  
+  #logot {
+    
+    margin-left:auto;
+    margin-right:auto;
+    
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+  </style>
+
+  
+</head>
+
+<body>
+  
+  <div id="logo">
+    
+    <img id="logot" class="center" src="marrysotter.jpg">
+  </div>
+  
+  <div id="div1">
+    <h1>room one</h1>
+    
+        <input type="text" id="usersChoice">
+        <button id="STOPBITCH" onclick="room1()">Add to list</button>
+        <button onclick="gtfo">clear room</button>
+        <button onclick="clean1">lock / unlock room</button>
+        <h1 id="output"></h1>
+        <ol>
+      
+        </ol>
+    
+  </div>
+
+  
+  
+  <div id="div2">
+    <h1>room two</h1>
+    
+    <input type="text" id="usersChoice2">
+    <button onclick="room2()">add to list</button>
+    <button onclick="remove1">clear room</button>
+    <button onclick="clean1">lock / unlock room</button>
+    <ol>
+    
+    
+      
+    </ol>
+    
+  </div>
+  
+  
+  
+  <div id="div3">
+    <h1>room three</h1>
+      <input type="text" id="usersChoice3">
+        <button onclick="room3()">Add to list</button>
+        <button onclick="remove1">clear room</button>
+        <button onclick="clean1">lock / unlock room</button>
+        <ol>
+          
+        </ol>
+  </div>
+  
+  
+  
+  <div id="div4">
+    <h1>room four</h1>
+      <input type="text" id="usersChoice4">
+        <button onclick="room4()">Add to list</button>
+        <button onclick="remove1">clear room</button>
+        <button onclick="clean1">lock / unlock room</button>
+        <ol>
+          
+        </ol>
+  </div>
+  
+  
+  <div id="div5">
+    <h1>room five</h1>
+      <input type="text" id="usersChoice5">
+        <button onclick="room5()">Add to list</button>
+        <button onclick="remove1">clear room</button>
+        <button onclick="clean1">lock / unlock room</button>
+        <ol>
+          
+        </ol>
+  </div>
+  
+  
+  <div id="div6">
+    <h1>room six</h1>
+      <input type="text" id="usersChoice6">
+        <button onclick="room6()">Add to list</button>
+        <button onclick="remove1">clear room</button>
+        <button onclick="clean1">lock / unlock room</button>
+        <ol>
+          
+        </ol>
+  </div>
+    
+    
+    
+    
+    <div id="ph">
+      <h1><font color="white">penthouse reserved for mr.kam</font></h1>
+        <button onclick="welcomeSir">admit</button>
+        <button onclick="remove1">clear room</button>
+        <button onclick="clean1">lock / unlock room</button>
+        <ol>
+          
+        </ol>
+      
+    </div>
+    
+      
+ <script>
+ 
+ 
+     var score = 0;
+  
+   function room1() {
+        var usersChoice = document.getElementById('usersChoice').value;
+        document.getElementById('usersChoice').value = "";
+        var newList = document.createElement('li');
+        var newText = document.createTextNode(usersChoice);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[0];
+        position.appendChild(newList);
+         
+    if (score < 4)  {
+      score++;
+      document.getElementById('output').value = score;
+    }
+        
+        
+        
+    else ((score > 4) && (score < 6)) {
+      document.getElementById('output').innerHTML = "stop";
+      document.getElementById('STOPBITCH').style.visibility = "hidden";
+    }
+  
+        
+      }
+      
+      
+      
+   
+  function room2() {
+        var usersChoice2 = document.getElementById('usersChoice2').value;
+        document.getElementById('usersChoice2').value = "";
+        var newList = document.createElement('li');
+        var newText = document.createTextNode(usersChoice2);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[1];
+        position.appendChild(newList);
+     
+   }
+   
+   
+   function room3() {
+        var usersChoice2 = document.getElementById('usersChoice2').value;
+        document.getElementById('usersChoice2').value = "";
+        var newList = document.createElement('li');
+        var newText = document.createTextNode(usersChoice2);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[2];
+        position.appendChild(newList);
+     
+   }
+   
+   function room4() {
+        var usersChoice2 = document.getElementById('usersChoice2').value;
+        document.getElementById('usersChoice2').value = "";
+        var newList = document.createElement('li');
+        var newText = document.createTextNode(usersChoice2);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[3];
+        position.appendChild(newList);
+     
+   }
+   
+   function room5() {
+        var usersChoice2 = document.getElementById('usersChoice2').value;
+        document.getElementById('usersChoice2').value = "";
+        var newList = document.createElement('li');
+        var newText = document.createTextNode(usersChoice2);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[4];
+        position.appendChild(newList);
+     
+   }
+   
+   
+   function room6() {
+        var usersChoice2 = document.getElementById('usersChoice2').value;
+        document.getElementById('usersChoice2').value = "";
+        var newList = document.createElement('li');
+        var newText = document.createTextNode(usersChoice2);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[5];
+        position.appendChild(newList);
+      
+     
+   }
+   
+   
+   function bm() {
+        var usersChoice2 = document.getElementById('usersChoice2').value;
+        document.getElementById('usersChoice2').value = "";
+        var newList = document.createElement('li');
+        var newText = document.createTextNode(usersChoice2);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[6];
+        position.appendChild(newList);
+     
+   }
+   
+   
+   function ph() {
+        var usersChoice2 = document.getElementById('usersChoice2').value;
+        document.getElementById('usersChoice2').value = "";
+        var newList = document.createElement('li');
+        var newText = document.createTextNode(usersChoice2);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[7];
+        position.appendChild(newList);
+     
+   }
+   function gtfo(){
+     var removeA = document.getElementsByTagName('ol')[0];
+     var container = removeA.parentNode;
+     container.removeChild(removeA);
+   
+  }
+  
+  
+
+
+ </script>
+  
+  
+
+</body>
+
+
+</html>
+
+
+<!-- i recieved help from the folowing people
+
+-fill ip
+
+-->
